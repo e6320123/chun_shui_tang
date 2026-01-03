@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: "Libre Baskerville", "Noto Serif TC", Helvetica, Arial, 
+    "Microsoft JhengHei", Heiti TC, "メイリオ", sans-serif;
+}
+/* =========================
+   Header：左側固定導覽欄
+========================= */
+header{
+    border-right: 1px solid rgb(255, 255, 255);
+    width: 122px;
+    height: 100vh;
+    position: fixed;
+    /* background-color: aquamarine; */
+}
+header .wrap{
+    height: 100%;
+    padding: 25px 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin: 0 auto; */
+}
+header .wrap .topBox{
+    width: 92px;
+    height: 300px; 
+    /* outline: 1px solid rgb(255, 255, 255); */
+}
+.topBox .slideMenuTrigger{
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    /* outline: 1px solid rgb(255, 255, 255); */
+    position: relative;
+}
+
+.topBox .slideMenuTrigger::after{
+    content: "";
+    width: 20px;
+    height: 1px;
+    display: block;
+    background-color: #d5d5d5;
+    position: absolute;
+    top: 10px;
+}
+.slideMenuTrigger .line{
+    width: 100%;
+    height: 20px;
+    display: block;
+    position: relative;
+}
+.slideMenuTrigger .line::before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #d5d5d5;
+    display: block;
+}
+.slideMenuTrigger .line::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #d5d5d5;
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+.slideMenuTrigger .text{
+    height: 12px;
+    color: #d5d5d5;
+    display: block;
+    line-height: 1;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+.topBox .logo{ /* 已完成 */
+  width: 35px;
+  margin: 33px auto 0;
+} 
+.topBox .logo a{
+  display: block;
+}
+.topBox .logo-stamp{ /* 已完成 */
+  max-width: 22px;
+  margin: 0 auto 11px;
+  display: block;
+}
+.topBox .logo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: invert(0);       /* 顏色反轉 */
+  transition: filter 0.5s;
+}
+.topBox .logo.scrolled img:nth-child(2){
+   filter: invert(1);
+}
+
+.bottomBox{
+    width: 92px;
+    height: 426px;
+    /* outline: 1px solid white; */
+}
+.bottomBox .outerLinkList{
+    /* outline: 1px solid red;
+    padding: 2px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 3px;
+    filter: invert(0);
+    transition: filter 0.5s;
+}
+.bottomBox .outerLinkList.scrolled{
+    filter: invert(1);
+}
+.bottomBox .outerLinkList li{
+    padding-bottom: 7px;
+    margin-bottom: 12px;
+}
+.bottomBox .outerLinkList a{
+    writing-mode: vertical-lr;
+    color: #d5d5d5;
+    font-size: 14px;
+    letter-spacing: 4px;
+    /* display: inline-block; */
+}
+.socialBox .socialList{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    filter: invert(0);
+    transition: filter 0.5s;
+}
+.socialBox .socialList.scrolled{
+   filter: invert(1);
+}
+.socialBox .socialList li:first-child{
+    margin-top: 0;
+}
+.socialBox .socialList li{
+    margin: 5px 0;
+}
+.socialBox .socialList li a {
+    color: #d5d5d5;
+    font-size: 18px;
+    display: block;
+    padding: 5px;
+    /* text-align: center; */
+}
+.Txt{
+    
+} 
+.bannerArea{
+    width: 1746px;
+    /* overflow-x: hidden; */
+    /* max-width: 100%; */
+    box-sizing: border-box;
+    /* outline: 5px solid red; */
+}
+.bannerArea img{
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+
+section{
+    position: relative;
+    left: 155px;
+    width: 1500px;
+}
