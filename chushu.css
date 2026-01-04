@@ -18,6 +18,7 @@ header{
     height: 100vh;
     position: fixed;
     /* background-color: aquamarine; */
+    z-index: 999;
 }
 header .wrap{
     height: 100%;
@@ -26,6 +27,7 @@ header .wrap{
     flex-direction: column;
     justify-content: space-between;
     /* margin: 0 auto; */
+    
 }
 header .wrap .topBox{
     width: 92px;
@@ -157,21 +159,83 @@ header .wrap .topBox{
     padding: 5px;
     /* text-align: center; */
 }
-.Txt{
-    
-} 
 .bannerArea{
     width: 1746px;
     /* overflow-x: hidden; */
     /* max-width: 100%; */
     box-sizing: border-box;
     /* outline: 5px solid red; */
+    position: relative;
 }
 .bannerArea img{
     width: 100%;
     /* overflow-x: hidden; */
 }
-
+.bannerArea .Txt{
+    /* outline: 2px solid rgb(34, 255, 0); */
+    width: 100%;
+    padding-left: 122px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    height: 891px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+.bannerArea .Txt .textBox{
+    /* outline: 2px solid rgb(255, 196, 0); */
+    width: 100%;
+    padding-left: 11.5%;
+    height: 428px;
+}
+.Txt .textBox .en{
+    color: #d5d5d5;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Libre Baskerville", "Noto Serif TC", "Microsoft JhengHei", serif;
+    letter-spacing: 3px;
+    line-height: 2;
+    margin-bottom: 25px;
+    display: block;
+}
+.Txt .textBox .title{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+    white-space: pre-line;
+    /* transform-origin: top left; */
+}
+.Txt .textBox .subtitle{
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 2.75px;
+    margin-top: 15px;
+}
+.Txt .textBox .text{
+    max-width: 480px;
+    display: block;
+    margin-top: 35px;
+    color: #d5d5d5;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+    line-height: 2;
+    letter-spacing: 0.25px;
+}
+.bannerArea .Txt .btnBox{
+    margin-top: 35px;
+}
+.Txt .btnBox .btn_color_white{
+    color: #fff;
+}
 section{
     position: relative;
     left: 155px;
