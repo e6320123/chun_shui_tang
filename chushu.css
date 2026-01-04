@@ -150,7 +150,7 @@ header .wrap .topBox{
     margin-top: 0;
 }
 .socialBox .socialList li{
-    margin: 5px 0;
+    /* margin: 5px 0; */
 }
 .socialBox .socialList li a {
     color: #d5d5d5;
@@ -158,6 +158,44 @@ header .wrap .topBox{
     display: block;
     padding: 5px;
     /* text-align: center; */
+}
+header .bottomBox .languageBox {
+    margin: 15px 0 0;
+    padding-top: 25px;
+    position: relative;
+    /* outline: 1px solid red; */
+}
+header .bottomBox .languageBox:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #919191;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .bottomBox .languageBox:hover .languageCurrent img{
+    filter: none;
+}
+header .bottomBox .languageBox:hover .languageList a{
+    color: rgb(248, 76, 76);
+}
+.languageBox .languageCurrent img{
+    filter: brightness(0.5) grayscale(1) contrast(0.1);
+    width: 100%;
+    transition: all 0.65s ease-in-out;
+    /* height: auto; */
+    /* display: block; */
+}
+.languageBox .languageList a{
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+    text-align: center;
+    color: #000;
+    transition: all 0.65s ease-in-out;
 }
 .bannerArea{
     width: 1746px;
@@ -235,6 +273,29 @@ header .wrap .topBox{
 }
 .Txt .btnBox .btn_color_white{
     color: #fff;
+    padding: 20px 85px 20px 0;
+    position: relative;
+}
+.Txt .btnBox .btn_color_white::before{
+    content: "";
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    
+}
+.Txt .btnBox .btn_color_white::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: url('https://www.chunshuitang.com.tw/images/arrow.svg');
+    filter: contrast(0) brightness(2);
 }
 .bannerArea .Txt .vertical{
     /* outline: 2px solid rgb(255, 196, 0); */
