@@ -236,6 +236,27 @@ header .wrap .topBox{
 .Txt .btnBox .btn_color_white{
     color: #fff;
 }
+.bannerArea .Txt .vertical{
+    /* outline: 2px solid rgb(255, 196, 0); */
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 120px;
+    right: 21%;
+    /* z-index: 1; */
+}
+.bannerArea .Txt .vertical .textEditor{
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 4px;
+    line-height: 1.78;
+    writing-mode: vertical-rl;
+}
+.bannerArea .Txt .vertical img{
+    width: 95px;
+    height: 270px;
+    transform: translateY(-52px);
+}
 section{
     position: relative;
     left: 155px;
