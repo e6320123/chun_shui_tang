@@ -9,6 +9,11 @@ body{
     font-family: "Libre Baskerville", "Noto Serif TC", Helvetica, Arial, 
     "Microsoft JhengHei", Heiti TC, "メイリオ", sans-serif;
 }
+.outerWrap{
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
 /* =========================
    Header：左側固定導覽欄
 ========================= */
@@ -94,12 +99,15 @@ header .wrap .topBox{
   margin: 0 auto 11px;
   display: block;
 }
-.topBox .logo img{
+.topBox .logo .text.vertical{
   width: 100%;
   height: auto;
   display: block;
   filter: invert(0);       /* 顏色反轉 */
   transition: filter 0.5s;
+}
+.topBox .logo .text.horizontal{
+    display: none;
 }
 .topBox .logo.scrolled img:nth-child(2){
    filter: invert(1);
@@ -198,7 +206,8 @@ header .bottomBox .languageBox:hover .languageList a{
     transition: all 0.65s ease-in-out;
 }
 .bannerArea{
-    width: 1746px;
+    /* width: 1746px; */
+    width: 100%;
     /* overflow-x: hidden; */
     /* max-width: 100%; */
     box-sizing: border-box;
@@ -212,11 +221,12 @@ header .bottomBox .languageBox:hover .languageList a{
 .bannerArea .Txt{
     /* outline: 2px solid rgb(34, 255, 0); */
     width: 100%;
+    /* height: 891px; */
+    height: 100%;
     padding-left: 122px;
     padding-right: 20px;
     padding-bottom: 15px;
     padding-top: 20px;
-    height: 891px;
     position: absolute;
     top: 0;
     display: flex;
@@ -228,6 +238,16 @@ header .bottomBox .languageBox:hover .languageList a{
     width: 100%;
     padding-left: 11.5%;
     height: 428px;
+}
+@media (max-width: 1680px) {
+    .bannerArea .Txt .textBox {
+        padding-left: 5%;
+    }
+}
+@media (max-width: 1280px) {
+    .bannerArea .Txt .textBox {
+        padding-left: 4%;
+    }
 }
 .Txt .textBox .en{
     color: #d5d5d5;
@@ -306,6 +326,16 @@ header .bottomBox .languageBox:hover .languageList a{
     right: 21%;
     /* z-index: 1; */
 }
+@media (max-width: 1680px) {
+    .bannerArea .Txt .vertical {
+        right: 5%;
+    }
+}
+@media (max-width: 1280px) {
+    .bannerArea .Txt .vertical {
+        right: 1%;
+    }
+}
 .bannerArea .Txt .vertical .textEditor{
     color: #fff;
     font-size: 14px;
@@ -321,5 +351,5 @@ header .bottomBox .languageBox:hover .languageList a{
 section{
     position: relative;
     left: 155px;
-    width: 1500px;
+    width: calc(100% - 155px)
 }
