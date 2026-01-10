@@ -1,27 +1,10 @@
-*{
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-body{
-    font-family: "Libre Baskerville", "Noto Serif TC", Helvetica, Arial, 
-    "Microsoft JhengHei", Heiti TC, "メイリオ", sans-serif;
-}
-.outerWrap{
-    max-width: 1920px;
-    margin: 0 auto;
-    position: relative;
-}
+
+
+ 
 /* =========================
    Header：左側固定導覽欄
 ========================= */
-header{
-    border-right: 1px solid #c0c0c0;
-    width: 122px;
-    height: 100vh;
-    position: fixed;
-    z-index: 999;
-}
+ 
 header .wrap{
     height: 100%;
     padding: 25px 15px 25px;
@@ -343,137 +326,11 @@ header .bottomBox .languageBox:hover .languageList a{
     width: 95px;
     height: 270px;
     transform: translateY(-52px);
-}
-.outBox{
-    padding-left: 122px;
-    width: 100%;
-}
-.outBox .aboutArea{
-    padding-bottom: 245px;
-    position: relative;
-    height: 979px;
-}
-.outBox .aboutArea .decoImg{
-    position: absolute;
-}
-.deco1{
-    bottom: -13%;
-    left: -15px;
-}
-.deco2{
-    bottom: -8px;
-    right: 0;
-}
-.deco3{
-    bottom: 0.5%;
-    right: 3%;
-}
-.outBox .aboutArea .wrap{
-    /* outline: 1px solid rgb(0, 255, 26); */
-    width: 100%;
-    padding-left: 20px;
-    display: flex;
-}
-.outBox .wrap .titleBox {
-    margin-top: 170px;
-    margin-right: 65px;
-    width: 85px;
-    padding-bottom: 10px;
-    display: flex;
-    position: relative;
-}
-.outBox .wrap .titleBox::after {
-    content: "";
-    width: 25px;
-    height: 52px;
-    background: url('https://www.chunshuitang.com.tw/images/stamp_rectangle.png') center/contain;
-    position: absolute;
-    bottom: -24px;
-    left: 12px;
-}
-.outBox .wrap .titleBox .title{
-    color: #000;
-    font-size: 36px;
-    font-weight: 500;
-    writing-mode: vertical-rl;
-}
-.outBox .wrap .titleBox .title>span{
-    display: inline-block;
-    line-height: 1;
-    padding-top: 8px;
-    padding-bottom: 26px;
-    position: relative;
-}
-.outBox .wrap .titleBox .title>span::before{
-    content: "";
-    width: 220%;
-    height: 1px;
-    background-color: #c0c0c0;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.outBox .wrap .titleBox .subtitle{
-    color: #3b3b3b;
-    font-size: 16px;
-    margin-right: 2px;
-    margin-left: auto;
-    writing-mode: vertical-rl;
-
-}
-.outBox .wrap .titleBox .subtitle>span{
-    display: inline-block;
-    line-height: 1;
-    padding-top: 9px;
-    padding-bottom: 45px;
 } 
-.outBox .wrap .aboutBox{
-    /* outline: 1px solid rgb(0, 128, 255); */
-    display: flex;
-     
-}
-.outBox .wrap .aboutBox .Txt{
-    /* outline: 4px solid red; */
-    width: 370px;
-    height: 375px;
-    margin-top: 167px;
-}
-.outBox .wrap .aboutBox .Txt .btnBox a::before{
-    content: "";
-    background-color: #000;
-    display: block;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-}
-.outBox .wrap .aboutBox .Txt .btnBox a::after{
-    content: "";
-    display: block;
-    width: 40px;
-    height: 6px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    background: url('https://www.chunshuitang.com.tw/images/arrow.svg');
-    /* filter: invert(0) */
-    filter: brightness(0) contrast(100);
-    /* brightness-0、contrast-100 */
-}
-.outBox .wrap .aboutBox .Txt .subtitle{
-     
-}
-.outBox .wrap .aboutBox .imgBox{
-    display: flex;
-    padding-left: 83px;
-}
+
 .foodNewsBg{
     background: url('https://www.chunshuitang.com.tw/images/texture_bg_gray.png');
 }
 
 
-section{
-    position: relative;
-    left: 155px;
-    width: calc(100% - 155px)
-}
+ 
