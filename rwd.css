@@ -1,0 +1,140 @@
+/* ==================================================
+   RWD - 手機專用（僅 480px 以下，平板不調整）
+================================================== */
+
+@media (max-width: 480px) {
+
+  /* ---------- Header：側邊欄縮寬（保留原本的直式側欄設計，不做成漢堡抽屜，
+     因為目前 HTML/JS 沒有選單開合邏輯，做成隱藏式選單只會變成看起來能點但按了沒反應） ---------- */
+  header {
+    width: 60px;
+  }
+  header .wrap {
+    padding: 15px 8px;
+  }
+  header .wrap .topBox {
+    width: 100%;
+    height: auto;
+  }
+  .topBox .slideMenuTrigger {
+    width: 28px;
+    height: 28px;
+  }
+  .slideMenuTrigger .text {
+    font-size: 9px;
+    margin-top: 8px;
+  }
+  .topBox .logo {
+    width: 22px;
+    margin-top: 20px;
+  }
+  .topBox .logo-stamp {
+    max-width: 14px;
+    margin-bottom: 6px;
+  }
+  .bottomBox {
+    width: 100%;
+    height: auto;
+  }
+  .bottomBox .outerLinkList a {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .socialBox .socialList li a {
+    font-size: 14px;
+    padding: 3px;
+  }
+  header .bottomBox .languageBox {
+    margin-top: 10px;
+    padding-top: 15px;
+  }
+  .languageBox .languageList a {
+    font-size: 10px;
+    padding: 6px 0;
+  }
+
+  /* ---------- 側欄變窄後，內容跟著改用新的 offset ---------- */
+  .outBox,
+  section {
+    padding-left: 60px;
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  /* ---------- Pages - Banner ---------- */
+  .bannerArea .Txt {
+    padding-left: 70px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .bannerArea .Txt .textBox {
+    padding-left: 0;
+    height: auto;
+  }
+  .Txt .textBox .en {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  .Txt .textBox .title {
+    font-size: 20px;
+  }
+  .Txt .textBox .subtitle {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  .Txt .textBox .text {
+    font-size: 12px;
+    max-width: 100%;
+    margin-top: 15px;
+  }
+  /* 直書詩句在窄螢幕會跟主文案疊在一起，手機版先隱藏 */
+  .bannerArea .Txt .vertical {
+    display: none;
+  }
+
+  /* ---------- Pages - About ---------- */
+  .aboutArea {
+    height: auto;
+    padding-bottom: 40px;
+  }
+  /* 背景裝飾圖在窄螢幕會蓋住文字，手機版先隱藏 */
+  .aboutArea .decoImg {
+    display: none;
+  }
+  .aboutArea .wrap {
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .aboutArea .titleBox {
+    margin-top: 30px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .aboutArea .aboutBox {
+    flex-direction: column;
+  }
+  .aboutArea .aboutBox .Txt {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+  /* HTML 裡三張圖片的容器是用 Tailwind 內聯 class 排版（pl-[83px] flex justify-between），
+     這裡用 :last-child 蓋掉它，改成直向堆疊 */
+  .aboutArea .aboutBox > div:last-child {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .aboutArea .aboutBox > div:last-child > div {
+    align-self: center;
+    bottom: 0;
+  }
+  .aboutArea .aboutBox > div:last-child img {
+    max-width: 100%;
+    height: auto;
+  }
+}

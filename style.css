@@ -1,0 +1,538 @@
+/* ==================================================
+                  1. Reset / Base
+================================================== */
+
+/* 全局 */
+
+/* 定位 → 盒模型 → 字體 → 顏色 → 動畫 */
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family:
+    "Libre Baskerville",
+    "Noto Serif TC",
+    Helvetica,
+    Arial,
+    "Microsoft JhengHei",
+    sans-serif;
+}
+
+/* ==================================================
+                  2. Layout（大架構）
+================================================== */
+
+.outerWrap {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  width: 122px;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  border-right: 1px solid #c0c0c0;
+}
+
+.outBox {
+  padding-left: 122px;
+  width: 100%;
+}
+
+section {
+  position: relative;
+  left: 155px;
+  width: calc(100% - 155px);
+}
+
+/* ==================================================
+                  3. Components（可重用元件）
+================================================== */
+
+/* 📌 字體風格、按鈕樣式 */
+
+/* =========================
+   Components - Header：左側固定導覽欄
+========================= */
+
+header .wrap {
+  height: 100%;
+  padding: 25px 15px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .wrap .topBox {
+  width: 92px;
+  height: 300px;
+}
+.topBox .slideMenuTrigger {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  position: relative;
+}
+.topBox .slideMenuTrigger::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  display: block;
+  background-color: #d5d5d5;
+  position: absolute;
+  top: 10px;
+}
+.slideMenuTrigger .line {
+  width: 100%;
+  height: 20px;
+  display: block;
+  position: relative;
+}
+.slideMenuTrigger .line::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d5d5d5;
+  display: block;
+}
+.slideMenuTrigger .line::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d5d5d5;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+.slideMenuTrigger .text {
+  height: 12px;
+  color: #d5d5d5;
+  display: block;
+  line-height: 1;
+  letter-spacing: 0.8px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.topBox .logo {
+  width: 35px;
+  margin: 33px auto 0;
+}
+.topBox .logo a {
+  display: block;
+}
+.topBox .logo-stamp {
+  max-width: 22px;
+  margin: 0 auto 11px;
+  display: block;
+}
+.topBox .logo .text.vertical {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: invert(0);
+  transition: filter 0.5s;
+}
+.topBox .logo .text.horizontal {
+  display: none;
+}
+.topBox .logo.scrolled img:nth-child(2) {
+  filter: invert(1);
+}
+
+.bottomBox {
+  width: 92px;
+  height: 426px;
+}
+.bottomBox .outerLinkList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 3px;
+  filter: invert(0);
+  transition: filter 0.5s;
+}
+.bottomBox .outerLinkList.scrolled {
+  filter: invert(1);
+}
+.bottomBox .outerLinkList li {
+  padding-bottom: 7px;
+  margin-bottom: 12px;
+}
+.bottomBox .outerLinkList a {
+  writing-mode: vertical-lr;
+  color: #d5d5d5;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.socialBox .socialList {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  filter: invert(0);
+  transition: filter 0.5s;
+}
+.socialBox .socialList.scrolled {
+  filter: invert(1);
+}
+.socialBox .socialList li:first-child {
+  margin-top: 0;
+}
+.socialBox .socialList li a {
+  color: #d5d5d5;
+  font-size: 18px;
+  display: block;
+  padding: 5px;
+}
+
+header .bottomBox .languageBox {
+  margin: 15px 0 0;
+  padding-top: 25px;
+  position: relative;
+}
+header .bottomBox .languageBox:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #919191;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header .bottomBox .languageBox:hover .languageCurrent img {
+  filter: none;
+}
+header .bottomBox .languageBox:hover .languageList a {
+  color: rgb(248, 76, 76);
+}
+.languageBox .languageCurrent img {
+  filter: brightness(0.5) grayscale(1) contrast(0.1);
+  transition: all 0.65s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+.languageBox .languageList a {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  padding: 10px 0;
+  text-align: center;
+  color: #000;
+  transition: all 0.65s ease-in-out;
+}
+
+/* =========================
+   Components - Text
+========================= */
+
+.Txt .textBox .en {
+  color: #d5d5d5;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Libre Baskerville", "Noto Serif TC", "Microsoft JhengHei", serif;
+  letter-spacing: 3px;
+  line-height: 2;
+  margin-bottom: 25px;
+  display: block;
+}
+.Txt .textBox .title {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.5px;
+  white-space: pre-line;
+}
+.Txt .textBox .subtitle {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 2.75px;
+  margin-top: 15px;
+}
+.Txt .textBox .text {
+  max-width: 480px;
+  display: block;
+  margin-top: 35px;
+  color: #d5d5d5;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  line-height: 2;
+  letter-spacing: 0.25px;
+}
+.Txt .btnBox .btn_color_white {
+  color: #fff;
+  padding: 20px 85px 20px 0;
+  position: relative;
+}
+.Txt .btnBox .btn_color_white::before {
+  content: "";
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+}
+.Txt .btnBox .btn_color_white::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background: url('https://www.chunshuitang.com.tw/images/arrow.svg');
+  filter: contrast(0) brightness(2);
+}
+
+/* ==================================================
+                  4. Pages（頁面專屬）
+================================================== */
+
+/* 📌 Pages 只管位置、尺寸、排列 */
+/* 📌 不管字體風格、不管按鈕樣式 */
+
+/* =========================
+   Pages - Banner
+========================= */
+
+.bannerArea {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.bannerArea img {
+  width: 100%;
+  display: block;
+}
+.bannerArea .Txt {
+  width: 100%;
+  height: 100%;
+  padding-left: 122px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bannerArea .Txt .textBox {
+  width: 100%;
+  padding-left: 11.5%;
+  height: 428px;
+}
+@media (max-width: 1680px) {
+  .bannerArea .Txt .textBox {
+    padding-left: 5%;
+  }
+}
+@media (max-width: 1280px) {
+  .bannerArea .Txt .textBox {
+    padding-left: 4%;
+  }
+}
+.bannerArea .Txt .btnBox {
+  margin-top: 35px;
+}
+.bannerArea .Txt .vertical {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 120px;
+  right: 21%;
+}
+@media (max-width: 1680px) {
+  .bannerArea .Txt .vertical {
+    right: 5%;
+  }
+}
+@media (max-width: 1280px) {
+  .bannerArea .Txt .vertical {
+    right: 1%;
+  }
+}
+.bannerArea .Txt .vertical .textEditor {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 4px;
+  line-height: 1.78;
+  writing-mode: vertical-rl;
+}
+.bannerArea .Txt .vertical img {
+  width: 95px;
+  height: 270px;
+  transform: translateY(-52px);
+}
+
+/* =========================
+   Pages - About
+========================= */
+
+/* ============
+   About Area
+============= */
+
+/* 區塊本體 */
+.aboutArea {
+  position: relative;
+  height: 979px;
+  padding-bottom: 245px;
+}
+/* 裝飾圖 */
+.aboutArea .decoImg {
+  position: absolute;
+}
+.aboutArea .deco1 {
+  left: -15px;
+  bottom: -13%;
+}
+.aboutArea .deco2 {
+  right: 0;
+  bottom: -8px;
+}
+.aboutArea .deco3 {
+  right: 3%;
+  bottom: 0.5%;
+}
+/* 內層排列 */
+.aboutArea .wrap {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 20px;
+}
+/* ============
+   About Title
+============= */
+.aboutArea .titleBox {
+  position: relative;
+  display: flex;
+  width: 85px;
+  margin-top: 170px;
+  margin-right: 65px;
+  padding-bottom: 10px;
+}
+.aboutArea .titleBox::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: -24px;
+  width: 25px;
+  height: 52px;
+  background: url('https://www.chunshuitang.com.tw/images/stamp_rectangle.png') center/contain;
+}
+.aboutArea .titleBox .title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+  writing-mode: vertical-rl;
+}
+.aboutArea .titleBox .title>span {
+  position: relative;
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 26px;
+  line-height: 1;
+}
+.aboutArea .titleBox .title>span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220%;
+  height: 1px;
+  background-color: #c0c0c0;
+}
+.aboutArea .titleBox .subtitle {
+  margin-left: auto;
+  margin-right: 2px;
+  font-size: 16px;
+  color: #3b3b3b;
+  writing-mode: vertical-rl;
+}
+.aboutArea .titleBox .subtitle>span {
+  display: inline-block;
+  padding-top: 9px;
+  padding-bottom: 45px;
+  line-height: 1;
+}
+
+/* ============
+   About Content
+============= */
+.aboutArea .aboutBox {
+  display: flex;
+}
+.aboutArea .aboutBox .Txt {
+  width: 370px;
+  height: 375px;
+  margin-top: 167px;
+}
+/* 按鈕樣式（只限 about 區） */
+.aboutArea .aboutBox .Txt .btnBox a {
+  position: relative;
+}
+.aboutArea .aboutBox .Txt .btnBox a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.aboutArea .aboutBox .Txt .btnBox a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 40px;
+  height: 6px;
+  background: url('https://www.chunshuitang.com.tw/images/arrow.svg');
+  filter: brightness(0) contrast(100);
+}
+
+/* ==================================================
+                  5. State（狀態）
+================================================== */
+/* =========================
+   State
+========================= */
+
+/* 捲動狀態的實際效果已併入對應元件（見上方 Header、Banner 區塊內帶 .scrolled 的 filter/transition 規則） */
+
+/* ==================================================
+                  6. Utilities（小工具）
+================================================== */
+/* =========================
+   Utilities
+========================= */
+
+.w-100 {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.foodNewsBg {
+  background: url('https://www.chunshuitang.com.tw/images/texture_bg_gray.png');
+}
